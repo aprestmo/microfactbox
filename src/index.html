@@ -3,17 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <title>Mikrofaktaboks | DN</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.scss" />
     <script type="module" src="app.js"></script>
   </head>
   <body>
     <!-- https://www.dn.no/innlegg/okonomi/formuesskatt/politikk/innlegg-formuesskatt-med-hoyt-bunnfradrag-ma-til/2-1-1098371 -->
     <header>
-      <a href="https://www.dn.no/">DN</a>
+      <a href="https://www.dn.no/">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 57 31" height="31">
+          <path fill="#2F2F2F" fill-rule="evenodd" d="M8.806 31h4.762c10.324 0 14.537-7.387 14.537-16.1 0-6.987-3.834-14.857-14.03-14.857H0v1.124h.156c.823-.002 1.572-.004 2.245.562.717.603.801 1.446.801 8.553v10.48c0 6.946-.084 7.95-.8 8.552-.717.603-1.601.603-2.402.603V31h8.806Zm.508-29.637h3.454c5.646 0 9.018 6.023 9.017 14.455 0 8.874-3.75 13.933-8.764 13.933-.38 0-3.75-.04-3.75-.04l.043-28.348Z" clip-rule="evenodd"/>
+          <path fill="#2F2F2F" d="M56.934 1.082c-2.647 0-4.538.96-4.623 5.166-.042 1.882-.083 8.61-.083 8.61v16.1H50.336L32.517 7.529c0 1.842.043 4.405.043 8.05 0 3.524 0 7.289.042 9.17.083 4.206 1.974 5.168 4.623 5.168v1.04H25.919v-1.04c2.647 0 4.539-.962 4.622-5.167.042-1.882.084-9.171.084-9.171l.043-10.533c-1.892-2.603-2.438-3.805-4.834-3.965V.04h4.245C31.172.04 35.29 0 35.29 0l15.004 19.464v-4.606c0-3.524 0-6.728-.042-8.61-.084-4.205-1.975-5.166-4.623-5.166V.04h11.305v1.042Z"/>
+        </svg>
+      </a>
     </header>
     <main>
+      <picture>
+        <img src="e46d07aa15cdfd345f40d3c244859fe3.jpg" alt="">
+      </picture>
+
       <header>
-        <label for="">Innlegg</label>
+        <label for="" class="label">Innlegg</label>
         <!-- span? -->
         <h1>Formuesskatt med høyt bunnfradrag må til</h1>
         <h2>
@@ -21,12 +30,15 @@
           for familiebedrifter med lav lønnsomhet. Med lavere inntektsskatt
           kunne også lønnsmottagere overlatt mer til sine arvinger.
         </h2>
-        <dl>
-          <dt>Publisert:</dt>
-          <dd><time datetime="2021-11-15T11:04:00Z">15.11.21 – 11.04</time></dd>
-
-          <dt>Oppdatert:</dt>
-          <dd><time datetime="2021-11-15T11:59:00Z">15.11.21 – 11.59</time></dd>
+        <dl class="byline">
+          <div class="byline__item">
+            <dt class="byline__key">Publisert:</dt>
+            <dd class="byline__value"><time datetime="2021-11-15T11:04:00Z">15.11.21 &ndash; kl. 11.04</time></dd>
+          </div>
+          <div class="byline__item">
+            <dt class="byline__key">Oppdatert:</dt>
+            <dd class="byline__value"><time datetime="2021-11-15T11:59:00Z">15.11.21 &ndash; kl. 11.59</time></dd>
+          </div>
         </dl>
 
         <span>
