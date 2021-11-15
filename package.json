@@ -1,0 +1,24 @@
+{
+  "name": "microfactbox",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "serve": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aprestmo/microfactbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aprestmo/microfactbox/issues"
+  },
+  "homepage": "https://github.com/aprestmo/microfactbox#readme",
+  "devDependencies": {
+    "parcel": "latest"
+  }
+}
