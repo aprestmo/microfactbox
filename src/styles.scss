@@ -207,9 +207,12 @@ p {
       will-change: text-decoration;
 
       &:focus {
-        background-color: hsla(51, 100%, 50%, 0.1);
         outline: 0.0625rem dotted hsl(205, 53%, 20%);
         outline-offset: 0.125rem;
+      }
+
+      &:focus-visible {
+        background-color: hsla(51, 100%, 50%, 0.1);
       }
 
       &:hover {

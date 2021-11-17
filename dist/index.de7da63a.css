@@ -190,9 +190,11 @@ p {
   will-change: text-decoration;
 }
 .mfb__explanation a:focus {
-  background-color: rgba(255, 217, 0, 0.1);
   outline: 0.0625rem dotted #18384e;
   outline-offset: 0.125rem;
+}
+.mfb__explanation a:focus-visible {
+  background-color: rgba(255, 217, 0, 0.1);
 }
 .mfb__explanation a:hover {
   --thickness: 0.125rem;
