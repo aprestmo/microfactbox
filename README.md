@@ -6,4 +6,3 @@ Requires: Node (>= v. 14.17.1), Yarn (v. 1.22.11).
 ## Develop
 `yarn`    # Install project.  
 `yarn serve`    # Development server.   
-`yarn build`    # Production build.  
