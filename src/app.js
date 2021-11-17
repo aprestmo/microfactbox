@@ -9,6 +9,8 @@ document.addEventListener('click', function (event) {
     event.target.parentElement.nextElementSibling.classList.toggle('is-hidden')
     
     if (event.target.parentElement.nextElementSibling.classList.contains('is-hidden')) {
+      event.target.parentElement.nextElementSibling.setAttribute('aria-expanded', false);
+    } else {
       event.target.parentElement.nextElementSibling.setAttribute('aria-expanded', true);
     }
   }
