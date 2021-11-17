@@ -1,0 +1,232 @@
+:root {
+  --flow-space: 1.5em;
+  --font-size: 1em;
+  --line-height: 1.5;
+  --max-grid-width: 57.5rem;
+  --site-padding: 1rem;
+
+  @media screen and (min-width: 660px) {
+    --font-size: 1.125em;
+    --line-height: 1.6666666667;
+  }
+}
+
+::selection {
+  background-color: hsla(200 100% 41% / 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: hsl(0, 0%, 15%);
+  font-family: "Guardian TextSans Web", sans-serif;
+  text-rendering: optimizeSpeed;
+}
+
+img,
+picture {
+  display: block;
+  max-inline-size: 100%;
+}
+
+mark {
+  background-color: hsla(51, 100%, 50%, 0.1);
+  cursor: help;
+  border-block-end: 1px solid hsl(0, 0%, 87%);
+}
+
+p {
+  font-family: "Guardian Egyptian", serif;
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+.site-header {
+  border-block-end: 1px solid hsl(240 0% 87%);
+  display: flex;
+  place-content: center;
+
+  a {
+    block-size: 7.75rem;
+    display: inline-flex;
+    place-items: center;
+  }
+}
+
+.story {
+  --max-grid-width: 57.5rem;
+  inline-size: min(var(--max-grid-width), 100vw - var(--site-padding));
+  margin-block-end: 6rem;
+  margin-inline: auto;
+
+  &__header {
+    --flow-space: 4rem;
+    margin-block: 4em;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__meta {
+    --meta-spacing: 0.75em;
+    column-gap: var(--meta-spacing);
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 0.7em;
+    letter-spacing: 0.08em;
+    place-content: center;
+    text-transform: uppercase;
+  }
+
+  &__label {
+    &::after {
+      color: hsl(220, 13%, 59%);
+      content: "|";
+      margin-inline-start: var(--meta-spacing);
+    }
+  }
+
+  &__published {
+    column-gap: var(--meta-spacing);
+    display: flex;
+    flex-wrap: nowrap;
+
+    > * {
+      --meta-spacing: 0.2em;
+      column-gap: var(--meta-spacing);
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__intro {
+    --flow-space: 0.5em;
+    margin-block-start: 3em;
+  }
+
+  &__image {
+    aspect-ratio: 16 / 9;
+  }
+
+  &__title {
+    font-family: "Guardian Sans Condensed";
+    font-size: clamp(1.5rem, 10vw, 3.125rem);
+    font-weight: 200;
+    line-height: 1.25;
+
+    strong {
+      font-size: clamp(1.25rem, 10vw, 3.75rem);
+      font-weight: 900;
+    }
+  }
+
+  &__lead {
+    color: hsl(0, 0%, 51%);
+    font-family: "Guardian Egyptian", serif;
+    font-size: clamp(1em, 10vw, 1.25em);
+    font-weight: 300;
+    margin-inline: auto;
+    max-inline-size: 70%;
+    line-height: 1.5;
+  }
+
+  &__authors {
+    --label-height: 2rem;
+    block-size: var(--label-height);
+    border: 1px solid hsl(205 33% 87%);
+    border-radius: calc(var(--label-height) / 2);
+    display: inline-flex;
+    font-size: 0.875em;
+    padding-inline: 1em;
+    place-items: center;
+  }
+
+  &__text {
+    --max-grid-width: 40rem;
+    inline-size: min(var(--max-grid-width), 100vw - var(--site-padding));
+    margin-block-start: 8em;
+    margin-inline: auto;
+
+    p span {
+      float: left;
+      font-size: 3.25em;
+      font-weight: 700;
+      line-height: 1;
+      padding-inline-end: 0.125em;
+    }
+  }
+}
+
+.mfb {
+  border-block-end: 1px solid hsl(0, 0%, 87%);
+  font-size: 0.875em;
+  padding-block-end: 1em;
+
+  &__definition {
+    background-color: rgba(255, 215, 0, 0.1);
+    display: inline-flex;
+    font-size: 0.875em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__explanation {
+    a {
+      --thickness: 0.0625rem;
+      color: hsl(205, 53%, 20%);
+      text-decoration: solid underline currentColor var(--thickness);
+      text-underline-offset: 0.1em;
+      transition: text-decoration 500ms ease-in;
+      will-change: text-decoration;
+
+      &:focus {
+        background-color: hsla(51, 100%, 50%, 0.1);
+        outline: 0.0625rem dotted hsl(205, 53%, 20%);
+        outline-offset: 0.125rem;
+      }
+
+      &:hover {
+        --thickness: 0.125rem;
+      }
+    }
+  }
+}
+
+.is-hidden {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.is-showing {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+}

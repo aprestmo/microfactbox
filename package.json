@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/aprestmo/microfactbox#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
     "parcel": "latest"
   }
 }
