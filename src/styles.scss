@@ -203,7 +203,7 @@ p {
       color: hsl(205, 53%, 20%);
       text-decoration: solid underline currentColor var(--thickness);
       text-underline-offset: 0.1em;
-      transition: text-decoration 150ms ease-in;
+      transition: text-decoration 50ms ease;
       will-change: text-decoration;
 
       &:focus {
