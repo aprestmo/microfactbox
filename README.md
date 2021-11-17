@@ -1,5 +1,5 @@
 # Micro Fact Box
-Requires: Node, Yarn.
+Requires: Node (v. 16), Yarn (v. 1.22.11).
 
 * Server: localhost:1234
 
