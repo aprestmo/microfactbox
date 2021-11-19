@@ -2,6 +2,7 @@
 <html lang="nb-NO">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mikrofaktaboks | DN</title>
     <link
       rel="stylesheet"
@@ -9,9 +10,8 @@
       type="text/css"
     />
     <link rel="stylesheet" href="styles.scss" />
-    <script type="module" src="app.js"></script>
   </head>
-  <body>
+  <body class="show-none">
     <header class="site-header">
       <a href="https://www.dn.no/">
         <svg
@@ -72,21 +72,29 @@
       </header>
 
       <main class="story__text flow">
-        <span class="story__authors">
-          Auke Lont, Harald Norvik og Peter Mellbye
-        </span>
-
-        <div>
-          <span>Hvor mye forklaring trenger du?</span>
-          <div>
-            <input type="radio" id="easy" name="level" value="easy" checked>
-            <label for="easy">Ingenting</label>
-            
-            <input type="radio" id="medium" name="level" value="medium">
-            <label for="medium">Litt</label>
-            
-            <input type="radio" id="advanced" name="level" value="advanced">
-            <label for="advanced">Mye</label>
+        <div class="story__text-meta">
+          <span class="story__authors">
+            Auke Lont, Harald Norvik og Peter Mellbye
+          </span>
+  
+          <div class="assistance">
+            <span class="assistance__label">Hvor mye forklaring trenger du?</span>
+            <div class="assistance__items">
+              <label for="none">
+                <input type="radio" id="none" name="level" value="none" checked>
+                Ingenting
+              </label>
+              
+              <label for="some">
+                <input type="radio" id="some" name="level" value="some">
+                Litt
+              </label>
+              
+              <label for="lots">
+                <input type="radio" id="lots" name="level" value="lots">
+                Mye
+              </label>
+            </div>
           </div>
         </div>
 
@@ -94,7 +102,7 @@
           <span>D</span>en siste tiden er det blitt trukket opp ulike
           fremtidsperspektiver for norsk petroleumsvirksomhet i lys av
           akselererende
-          <mark>klimaendringer</mark>
+          <mark data-level="easy">klimaendringer</mark>
           og internasjonale klimaavtaler. Ingen av disse er særlig lystige. Noen
           har til og med tatt til orde for å sette en sluttdato – i god tid før
           2050.
@@ -120,7 +128,7 @@
         </p>
         <p>
           Det som derimot kan settes en sluttdato for, er
-          <mark>Oljefondet</mark>. Eller mer nøyaktig, deler av innbetalingene
+          <mark data-assistance="some">Oljefondet</mark>. Eller mer nøyaktig, deler av innbetalingene
           til fondet.
           <aside class="mfb">
             <dl>
@@ -249,5 +257,6 @@
         </p>
       </main>
     </article>
+    <script src="app.js"></script>
   </body>
 </html>

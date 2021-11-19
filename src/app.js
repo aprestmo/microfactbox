@@ -1,9 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+  assistanceLevel();
+
+  function assistanceLevel() {
+    if (document.querySelector('#none').checked) {
+      document.body.setAttribute('class', '');
+      document.body.classList.add('show-none');
+      console.log('ingenting');
+      
+    } else if (document.querySelector('#some').checked) {
+      document.body.setAttribute('class', '');
+      document.body.classList.add('show-some');
+      console.log('litt')
+    } else {
+      document.body.setAttribute('class', '');
+      document.body.classList.add('show-all');
+      console.log('mye')
+    }
+  }
+  
+  
   mfbs = document.querySelectorAll('.mfb');
   mfbs.forEach(mfb => {
     mfb.setAttribute('aria-expanded', false);
     mfb.classList.add('is-hidden');
   });
+  
+  document.addEventListener('input', assistanceLevel)
   
   document.addEventListener('click', function (event) {
     if (event.target.matches('mark')) {
@@ -17,21 +39,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 });
-
-
-const inputTags = document.querySelectorAll('input');
-// console.log(inputTags)
-
-document.addEventListener('input', function () {
-
-  inputTags.forEach(inputTag => {
-    // console.dir(inputTag.checked)
-    if (inputTag.checked && inputTag.value === 'easy') {
-      console.log('a: ', inputTag.value)
-    } else if (inputTag.checked && inputTag.value === 'medium') {
-      console.log('b: ', inputTag.value)
-    } else {
-      console.log('c: ', inputTag.value)
-    }
-  })
-})

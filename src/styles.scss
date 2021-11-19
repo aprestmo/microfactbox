@@ -57,8 +57,8 @@ picture {
 
 mark {
   background-color: hsla(51, 100%, 50%, 0.1);
-  cursor: help;
   border-block-end: 1px solid hsl(0, 0%, 87%);
+  cursor: help;
 }
 
 p {
@@ -75,7 +75,7 @@ p {
   place-content: center;
 
   a {
-    block-size: 7.75rem;
+    block-size: clamp(5rem, 10vw, 7.75rem);
     display: inline-flex;
     place-items: center;
   }
@@ -88,7 +88,7 @@ p {
   margin-inline: auto;
 
   &__header {
-    --flow-space: 4rem;
+    --flow-space: clamp(2rem, 5vw, 4rem);
     margin-block: 4em;
     margin-inline: auto;
     text-align: center;
@@ -98,10 +98,11 @@ p {
     --meta-spacing: 0.75em;
     column-gap: var(--meta-spacing);
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     font-size: 0.7em;
     letter-spacing: 0.08em;
     place-content: center;
+    row-gap: 0.2em;
     text-transform: uppercase;
   }
 
@@ -137,21 +138,23 @@ p {
 
   &__title {
     font-family: "Guardian Sans Condensed";
-    font-size: clamp(1.5rem, 10vw, 3.125rem);
+    font-size: clamp(1.5em, 8vw, 3.125em);
     font-weight: 200;
-    line-height: 1.25;
+    line-height: 1.5;
 
     strong {
-      font-size: clamp(1.25rem, 10vw, 3.75rem);
+      font-size: clamp(1.25em, 10vw, 1.75em);
       font-weight: 900;
+      line-height: 1;
     }
   }
 
   &__lead {
     color: hsl(0, 0%, 51%);
     font-family: "Guardian Egyptian", serif;
-    font-size: clamp(1em, 10vw, 1.25em);
+    font-size: clamp(1em, 4.5vw, 1.25em);
     font-weight: 300;
+    margin-block-start: 1.5em;
     margin-inline: auto;
     max-inline-size: 70%;
     line-height: 1.5;
@@ -171,7 +174,7 @@ p {
   &__text {
     --max-grid-width: 40rem;
     inline-size: min(var(--max-grid-width), 100vw - var(--site-padding));
-    margin-block-start: 8em;
+    margin-block-start: clamp(2em, 5vw, 8em);
     margin-inline: auto;
 
     p span {
@@ -181,6 +184,14 @@ p {
       line-height: 1;
       padding-inline-end: 0.125em;
     }
+  }
+
+  &__text-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25em;
+    justify-content: space-between;
+    margin-block-end: clamp(2em, 5vw, 4em);
   }
 }
 
@@ -219,6 +230,42 @@ p {
       &:hover {
         --thickness: 0.125rem;
       }
+    }
+  }
+}
+
+.assistance {
+  background-color: hsla(51, 100%, 50%, 0.1);
+  border-radius: 0.25rem;
+  padding-block: 0.5em;
+  padding-inline: 1em;
+
+  &__label {
+    font-weight: 500;
+  }
+}
+
+.show-none {
+  mark {
+    background-color: transparent;
+    border-block-end: 0;
+    cursor: auto;
+    pointer-events: none;
+  }
+}
+
+.show-some {
+  mark {
+    background-color: transparent;
+    border-block-end: 0;
+    cursor: auto;
+    pointer-events: none;
+
+    &[data-assistance="some"] {
+      background-color: hsla(51, 100%, 50%, 0.1);
+      border-block-end: 1px solid hsl(0, 0%, 87%);
+      cursor: help;
+      pointer-events: all;
     }
   }
 }
