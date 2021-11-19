@@ -473,6 +473,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
     });
 });
+const inputTags = document.querySelectorAll('input');
+// console.log(inputTags)
+document.addEventListener('input', function() {
+    inputTags.forEach((inputTag)=>{
+        // console.dir(inputTag.checked)
+        if (inputTag.checked && inputTag.value === 'easy') console.log('a: ', inputTag.value);
+        else if (inputTag.checked && inputTag.value === 'medium') console.log('b: ', inputTag.value);
+        else console.log('c: ', inputTag.value);
+    });
+});
 
 },{}]},["1Mq12","5HwUs"], "5HwUs", "parcelRequire4a55")
 

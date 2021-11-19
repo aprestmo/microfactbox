@@ -44,6 +44,7 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  accent-color: currentColor;
   color: #262626;
   font-family: "Guardian TextSans Web", sans-serif;
   text-rendering: optimizeSpeed;
