@@ -15,15 +15,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
             console.log('mye');
         }
     }
-
     mfbs = document.querySelectorAll('.mfb');
     mfbs.forEach((mfb)=>{
         mfb.setAttribute('aria-expanded', false);
         mfb.classList.add('is-hidden');
     });
-
     document.addEventListener('input', assistanceLevel);
-
     document.addEventListener('click', function(event) {
         if (event.target.matches('mark')) {
             event.target.parentElement.nextElementSibling.classList.toggle('is-hidden');

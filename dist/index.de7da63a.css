@@ -197,7 +197,7 @@ p {
   color: #18384e;
   text-decoration: solid underline currentColor var(--thickness);
   text-underline-offset: 0.1em;
-  transition: text-decoration 50ms ease;
+  transition: text-decoration 500ms ease-in;
   will-change: text-decoration;
 }
 .mfb__explanation a:focus {
@@ -216,6 +216,10 @@ p {
   border-radius: 0.25rem;
   padding-block: 0.5em;
   padding-inline: 1em;
+}
+.assistance__items {
+  column-gap: 0.75em;
+  display: flex;
 }
 .assistance__label {
   font-weight: 500;
