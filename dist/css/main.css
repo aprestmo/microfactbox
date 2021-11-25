@@ -221,6 +221,29 @@ ul {
   justify-content: space-between;
   margin-block-end: clamp(2em, 5vw, 4em);
 }
+.story__footer {
+  border-block-start: 1px solid #dedede;
+  margin-block-start: 4em;
+  padding-block: 1em;
+}
+.story__footer a {
+  align-items: center;
+  color: currentColor;
+  column-gap: 0.5em;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 0.75em;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.story__footer a:hover svg {
+  transform: rotate(180deg) translateX(0.375em);
+}
+.story__footer a svg {
+  transform: rotate(180deg) translateX(0);
+  transition: transform 150ms;
+}
 
 .mfb {
   border-block-end: 1px solid #dedede;
