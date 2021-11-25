@@ -272,6 +272,7 @@ ul {
       svg {
         transform: rotate(180deg) translateX(0);
         transition: transform 150ms;
+        will-change: transform;
       }
     }
   }
