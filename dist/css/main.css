@@ -4,9 +4,9 @@
   --font-size: 1em;
   --line-height: 1.5;
   --max-grid-width: 57.5rem;
-  --site-padding: 1rem;
+  --site-padding: 4rem;
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 40em) {
   :root {
     --font-size: 1.125em;
     --line-height: 1.6666666667;
@@ -85,12 +85,18 @@ ul {
   border-end-start-radius: var(--border-radius);
   border-end-end-radius: var(--border-radius);
   box-shadow: 0px 1.8px 1.9px rgba(0, 0, 0, 0.018), 0px 3.4px 4.4px rgba(0, 0, 0, 0.026), 0px 4.9px 8px rgba(0, 0, 0, 0.032), 0px 6.4px 13.8px rgba(0, 0, 0, 0.038), 0px 8.2px 23.8px rgba(0, 0, 0, 0.044), 0px 11.3px 43.7px rgba(0, 0, 0, 0.052), 0px 20px 80px rgba(0, 0, 0, 0.07);
-  flex-basis: 20%;
+  flex-basis: auto;
   flex-grow: 1;
-  transition: transform 150ms ease-out;
+  flex-shrink: 1;
 }
-.cards li:hover {
-  transform: scale(1.03);
+@media (min-width: 40em) {
+  .cards li {
+    flex-basis: 20%;
+    transition: transform 150ms ease-out;
+  }
+  .cards li:hover {
+    transform: scale(1.05);
+  }
 }
 .cards li a {
   color: currentColor;
@@ -99,6 +105,7 @@ ul {
 .cards li img {
   border-start-start-radius: var(--border-radius);
   border-start-end-radius: var(--border-radius);
+  inline-size: 100%;
 }
 .cards li h2 {
   font-size: 1em;
@@ -165,8 +172,16 @@ ul {
   --flow-space: 0.5em;
   margin-block-start: 3em;
 }
+.story__media {
+  display: grid;
+  row-gap: 0.25em;
+}
 .story__image {
   aspect-ratio: 16/9;
+}
+.story__image-caption {
+  color: #828282;
+  font-size: 0.75em;
 }
 .story__title {
   font-family: "Guardian Sans Condensed";
