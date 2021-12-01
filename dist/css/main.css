@@ -262,9 +262,10 @@ ul {
 .mfb__explanation a {
   --thickness: 0.0625rem;
   color: #18384e;
-  text-decoration: solid underline currentColor var(--thickness);
+  text-decoration: solid underline #313335 var(--thickness);
   text-underline-offset: 0.1em;
-  transition: text-decoration 500ms ease-in;
+  transition: text-decoration 60ms ease-in;
+  white-space: nowrap;
   will-change: text-decoration;
 }
 .mfb__explanation a:focus {
