@@ -264,7 +264,7 @@ ul {
   color: #18384e;
   text-decoration: solid underline #313335 var(--thickness);
   text-underline-offset: 0.1em;
-  transition: text-decoration 60ms ease-in;
+  transition: text-decoration 100ms ease-in;
   white-space: nowrap;
   will-change: text-decoration;
 }
