@@ -1,3 +1,6 @@
+/*! MicroFactBox v1.0.0 | (c) 2021 Alexander Prestmo | MIT License | git+https://github.com/aprestmo/microfactbox.git */
+'use strict';
+
 document.addEventListener('DOMContentLoaded', () => {
   assistanceLevel();
 
@@ -20,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
-  document.addEventListener('input', assistanceLevel)
+  document.addEventListener('input', assistanceLevel);
   
   document.addEventListener('click', function (event) {
     if (event.target.matches('mark')) {
-      event.target.parentElement.nextElementSibling.classList.toggle('is-hidden')
+      event.target.parentElement.nextElementSibling.classList.toggle('is-hidden');
       
       if (event.target.parentElement.nextElementSibling.classList.contains('is-hidden')) {
         event.target.parentElement.nextElementSibling.setAttribute('aria-expanded', false);
@@ -32,5 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
         event.target.parentElement.nextElementSibling.setAttribute('aria-expanded', true);
       }
     }
-  })
+  });
 });
